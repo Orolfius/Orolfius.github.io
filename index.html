@@ -3,107 +3,147 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Vincent Orolfo, Incident Responder and Security Operations professional." />
-    <title>Vincent Orolfo | Incident Responder</title>
+    <meta name="description" content="Interactive CV of Vincent Orolfo, Incident Responder and SOC Analyst." />
+    <title>Vincent Orolfo | Interactive CV</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Vincent Orolfo home"><span class="brand-mark">VO</span> Vincent Orolfo</a>
-      <nav aria-label="Main navigation">
-        <a href="#experience">Experience</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#credentials">Credentials</a>
+    <aside class="sidebar" aria-label="Profile and navigation">
+      <div class="sidebar-scroll">
+        <a class="portrait" href="#about" aria-label="Vincent Orolfo profile">
+          <img src="orolfo_commission.png" alt="Illustrated portrait of Vincent Orolfo" />
+          <span class="portrait-status"><i></i> Open to opportunities</span>
+        </a>
+        <div class="identity">
+          <p class="eyebrow">Interactive CV / 2026</p>
+          <h1>Vincent<br />Orolfo</h1>
+          <p class="role">Incident Responder<br /><span>&amp; SOC Analyst</span></p>
+          <p class="location">Quezon City, Philippines</p>
+        </div>
+        <nav class="side-nav" aria-label="CV sections">
+          <button class="tab-link active" data-tab="about"><span>01</span> About</button>
+          <button class="tab-link" data-tab="experience"><span>02</span> Experience</button>
+          <button class="tab-link" data-tab="capabilities"><span>03</span> Capabilities</button>
+          <button class="tab-link" data-tab="credentials"><span>04</span> Credentials</button>
+          <button class="tab-link" data-tab="learning"><span>05</span> Learning</button>
+          <button class="tab-link" data-tab="education"><span>06</span> Education</button>
+        </nav>
+        <div class="sidebar-tools">
+          <p class="mini-label">Security toolkit</p>
+          <div class="tool-icons" aria-label="Core tools">
+            <span title="Splunk" aria-label="Splunk">S</span>
+            <span title="Microsoft Sentinel" aria-label="Microsoft Sentinel">M</span>
+            <span title="CrowdStrike" aria-label="CrowdStrike">C</span>
+            <span title="ServiceNow" aria-label="ServiceNow">SN</span>
+            <span title="MISP" aria-label="MISP">MI</span>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-contact">
+        <a href="mailto:orolfojohnvincent@gmail.com">Email <b>↗</b></a>
+        <a href="https://www.linkedin.com/in/orolfius" target="_blank" rel="noreferrer">LinkedIn <b>↗</b></a>
+      </div>
+    </aside>
+
+    <header class="mobile-header">
+      <button class="mobile-brand" data-tab="about" aria-label="Go to about section"><span>VO</span><b>Vincent Orolfo</b></button>
+      <button class="menu-button" aria-expanded="false" aria-controls="mobile-menu">Menu <i></i></button>
+      <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile CV navigation">
+        <button class="tab-link active" data-tab="about">About</button>
+        <button class="tab-link" data-tab="experience">Experience</button>
+        <button class="tab-link" data-tab="capabilities">Capabilities</button>
+        <button class="tab-link" data-tab="credentials">Credentials</button>
+        <button class="tab-link" data-tab="learning">Learning</button>
+        <button class="tab-link" data-tab="education">Education</button>
       </nav>
-      <a class="header-contact" href="mailto:orolfojohnvincent@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
     </header>
 
-    <main id="top">
-      <section class="hero section-shell">
-        <p class="eyebrow"><span></span> Available for security opportunities</p>
-        <div class="hero-grid">
-          <div>
-            <h1>Defending what<br />matters <em>most.</em></h1>
-            <p class="hero-copy">Incident responder and security operations specialist based in Quezon City, Philippines. I translate complex threats into clear, decisive action.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="mailto:orolfojohnvincent@gmail.com">Get in touch <span>→</span></a>
-              <a class="button button-quiet" href="https://www.linkedin.com/in/orolfius" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
-            </div>
-          </div>
-          <aside class="status-card" aria-label="Professional snapshot">
-            <div class="status-top"><span class="pulse"></span> SOC / ACTIVE</div>
-            <div class="status-number">5<span>+</span></div>
-            <p>Years across security operations, incident response, and network support.</p>
-            <div class="status-row"><span>Current role</span><strong>SOC Analyst</strong></div>
-            <div class="status-row"><span>Focus</span><strong>Multi-cloud defense</strong></div>
-          </aside>
-        </div>
-        <div class="signal-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      </section>
-
-      <section class="intro section-shell" id="capabilities">
-        <p class="section-label">01 / Capabilities</p>
-        <div class="intro-content">
-          <h2>Calm analysis<br />under pressure.</h2>
-          <p>I investigate, contain, and communicate through high-severity incidents - with the technical depth to improve detections and the operational judgment to keep teams aligned.</p>
-        </div>
-        <div class="capability-grid">
-          <article><span>01</span><h3>Incident response</h3><p>Alert triage, containment, escalation, and stakeholder updates when response time matters.</p></article>
-          <article><span>02</span><h3>Threat detection</h3><p>Detection engineering and SIEM tuning that reduce noise while protecting critical signals.</p></article>
-          <article><span>03</span><h3>Threat hunting</h3><p>Proactive investigation across cloud and endpoint telemetry to surface attack paths early.</p></article>
-          <article><span>04</span><h3>Security operations</h3><p>Clear playbooks, operational documentation, team coordination, and shift leadership.</p></article>
-        </div>
-      </section>
-
-      <section class="experience" id="experience">
-        <div class="section-shell">
-          <p class="section-label light">02 / Experience</p>
-          <div class="experience-heading"><h2>On the<br /><em>front line.</em></h2><p>Building resilient security operations across finance, insurance, and technology environments.</p></div>
-          <div class="timeline">
-            <article class="role current">
-              <div class="role-date">Apr 2025 - Present</div>
-              <div class="role-main"><p class="role-kicker">ANZ Global Services &amp; Operations (Manila), Inc.</p><h3>SOC Analyst</h3><p>Monitoring, investigating, containing, and escalating multi-cloud security incidents as part of the internal SOC. I also improve SIEM detection logic, maintain critical playbooks, and rotate as shift lead for major incidents.</p></div>
-              <span class="role-dot" aria-hidden="true"></span>
-            </article>
-            <article class="role">
-              <div class="role-date">Mar 2023 - Apr 2025</div>
-              <div class="role-main"><p class="role-kicker">EY GDS CS Philippines</p><h3>Cybersecurity Consultant</h3><p>Delivered managed SOC services for insurance, agriculture, finance, assurance, and investment clients. Developed and tuned detections, hunted threats, supported incident response, and led client security reporting.</p><div class="tool-tags"><span>Splunk</span><span>Microsoft Sentinel</span><span>CrowdStrike</span><span>MISP</span><span>ServiceNow</span></div></div>
-              <span class="role-dot" aria-hidden="true"></span>
-            </article>
-            <article class="role">
-              <div class="role-date">Mar 2021 - Mar 2023</div>
-              <div class="role-main"><p class="role-kicker">Concentrix</p><h3>L1 Network Support Engineer</h3><p>Provided remote support and troubleshooting for consumer networking products, SOHO environments, operating systems, mobile devices, and connected-home technology.</p></div>
-              <span class="role-dot" aria-hidden="true"></span>
-            </article>
+    <main class="content" id="main-content">
+      <section class="page active" id="about" aria-labelledby="about-title">
+        <div class="page-intro hero-intro">
+          <p class="eyebrow accent"><i></i> Security operations / incident response</p>
+          <h2 id="about-title">Response-ready.<br /><em>Human-centered.</em></h2>
+          <p class="lead">I am an incident responder and security operations professional who investigates threats, improves detections, and helps teams stay decisive during high-severity events.</p>
+          <div class="contact-row">
+            <a class="button primary" href="mailto:orolfojohnvincent@gmail.com">Start a conversation <span>→</span></a>
+            <a class="button subtle" href="tel:+639565292207">(+63) 956 529 2207</a>
           </div>
         </div>
-      </section>
-
-      <section class="credentials section-shell" id="credentials">
-        <p class="section-label">03 / Credentials</p>
-        <div class="credential-layout">
-          <div><h2>Always<br />learning.</h2><p>Continuous training and hands-on research keep my response practice current.</p></div>
-          <div class="credential-lists">
-            <section><h3>Certifications</h3><ul><li>CompTIA Security+ SY0-701</li><li>ISC2 Certified in Cybersecurity (CC)</li><li>Microsoft SC-200 Security Operations Analyst</li><li>Microsoft SC-900 Security, Compliance &amp; Identity</li><li>Microsoft AI-900 Azure AI Fundamentals</li></ul></section>
-            <section><h3>Selected training</h3><ul><li>FOR508: Advanced Incident Response, Threat Hunting &amp; Digital Forensics</li><li>GuideM: Cyber Defense &amp; Threat Hunting</li><li>CrowdStrike University: Incident Responder &amp; Threat Hunter</li><li>IBM Security Analyst Fundamentals</li></ul></section>
-          </div>
+        <div class="at-a-glance">
+          <article><strong>05<span>+</span></strong><p>Years across security operations and network support</p></article>
+          <article><strong>Multi-<br />cloud</strong><p>Threat investigation, containment, and response</p></article>
+          <article><strong>SOC</strong><p>Rotating shift lead and cross-functional incident coordinator</p></article>
+        </div>
+        <div class="overview-grid">
+          <section class="overview-card full">
+            <p class="section-kicker">Professional profile</p>
+            <h3>Clear thinking when the signal is noisy.</h3>
+            <p>I work across alert monitoring, triage, containment, response, escalation, threat hunting, detection engineering, and stakeholder coordination. My practice combines hands-on technical analysis with the documentation and communication that make a security operation dependable.</p>
+          </section>
+          <section class="overview-card">
+            <p class="section-kicker">Core strengths</p>
+            <ul class="tick-list"><li>Threat detection and analysis</li><li>Threat hunting and intelligence</li><li>Incident response and escalation</li><li>Query languages</li><li>Detection engineering and management</li><li>Technical writing and stakeholder coordination</li></ul>
+          </section>
+          <section class="overview-card availability">
+            <p class="section-kicker">Current position</p>
+            <p class="current-role">SOC Analyst</p>
+            <p>ANZ Global Services &amp; Operations (Manila), Inc.</p>
+            <a class="text-link" href="#experience" data-tab="experience">View full experience <span>→</span></a>
+          </section>
         </div>
       </section>
 
-      <section class="lab section-shell">
-        <div><p class="section-label light">04 / Beyond the desk</p><h2>Learning by<br /><em>doing.</em></h2></div>
-        <p>I maintain a home cybersecurity lab with FlareVM, Kali Linux, and Linux Mint; work through LetsDefend labs and SOC simulations; and contribute to the CrowdStrike community.</p>
+      <section class="page" id="experience" aria-labelledby="experience-title" hidden>
+        <div class="page-intro compact"><p class="eyebrow accent"><i></i> 02 / Experience</p><h2 id="experience-title">Security operations,<br /><em>in practice.</em></h2><p class="lead">A detailed record of SOC, consulting, and network support work across finance, insurance, agriculture, retail, and consumer technology environments.</p></div>
+        <div class="timeline">
+          <article class="experience-card current">
+            <div class="timeline-meta"><p>Apr 2025 - Present</p><span>Current</span></div>
+            <div class="experience-main"><p class="company">ANZ Global Services &amp; Operations (Manila), Inc.</p><h3>SOC Analyst</h3><ul><li>A member of the Internal Security Operations Center (SOC) performing alert monitoring, triage, containment, response, and escalation.</li><li>Investigated and mitigated multi-cloud security threats, leveraging advanced analysis tools to contain incidents.</li><li>Orchestrated cross-functional incident response by coordinating with vulnerability, threat intelligence, and data services teams to resolve complex multi-cloud security alerts and high-severity incidents.</li><li>Spearheaded the reduction of false-positive alerts through rigorous tuning of SIEM detection logic and optimization of ingested data sources.</li><li>Standardized operational efficiency by auditing and updating critical playbooks, workflows, and onboarding documentation.</li><li>Acted as rotating Shift Lead, overseeing SOC operations and serving as the primary point of contact during major incidents to delegate tasks and provide clear, actionable updates to executive stakeholders.</li><li>Bridged communication gaps between technical and non-technical stakeholders during crisis scenarios.</li></ul></div>
+          </article>
+          <article class="experience-card">
+            <div class="timeline-meta"><p>Mar 2023 - Apr 2025</p></div>
+            <div class="experience-main"><p class="company">EY GDS CS Philippines</p><h3>Cybersecurity Consultant</h3><ul><li>Managed SOC services for clients in the insurance, agriculture, multi-finance, assurance, and investment industries.</li><li>Assessed technology stacks and available log sources to develop detection rules for alerting in Splunk and ticketing on the ServiceNow platform.</li><li>Managed detection rules by fine-tuning logic to reduce false positives in inaccurate drill-downs of events.</li><li>Conducted active threat hunting to identify potential threats and attack vectors using Splunk, Microsoft Sentinel, and CrowdStrike.</li><li>Contributed to incident response and retainer invocations.</li><li>Assisted in managing an internal threat intelligence platform using MISP, helping a global client group identify IoCs and IoAs observed during alert monitoring and triage.</li><li>Analyzed and triaged security events generated by detection rules and ticketed through service management platforms including ServiceNow and Verizon MSS.</li><li>Conducted network spike monitoring and investigation.</li><li>Responded to technical security questions and concerns from clients.</li><li>Served as delivery lead for a client, creating and reporting weekly and monthly security statistics and notable events.</li><li>Consulted with project management, technical operations, and detection engineering delivery groups, and facilitated L1 training and onboarding for client systems and processes.</li></ul><div class="tags"><span>Splunk</span><span>Sentinel</span><span>CrowdStrike</span><span>MISP</span><span>ServiceNow</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="timeline-meta"><p>Mar 2021 - Mar 2023</p></div>
+            <div class="experience-main"><p class="company">Concentrix</p><h3>L1 Network Support Engineer</h3><ul><li>Supported consumer home products and retail business units for networking tools including routers, switches, and mesh systems.</li><li>Provided remote assistance for Small Office/Home Office (SOHO) configuration, ensuring optimal setup and functionality.</li><li>Troubleshot SOHO network devices to resolve technical issues promptly and efficiently.</li><li>Supported premium-contract out-of-scope devices: macOS, Windows, and Linux computer systems; Android and iOS mobile phones; Amazon Firestick and Chromecast entertainment devices; and Amazon Echo and Google Home IoT devices.</li><li>Formulated and implemented sales strategies for premium support products, increasing revenue and customer engagement.</li></ul></div>
+          </article>
+        </div>
       </section>
 
-      <section class="contact section-shell">
-        <p class="section-label">05 / Contact</p>
-        <h2>Let's make security<br /><em>stronger.</em></h2>
-        <div class="contact-bottom"><a class="email-link" href="mailto:orolfojohnvincent@gmail.com">orolfojohnvincent@gmail.com <span>↗</span></a><p>Quezon City, Philippines<br /><a href="tel:+639565292207">(+63) 956 529 2207</a></p></div>
+      <section class="page" id="capabilities" aria-labelledby="capabilities-title" hidden>
+        <div class="page-intro compact"><p class="eyebrow accent"><i></i> 03 / Capabilities</p><h2 id="capabilities-title">The work behind<br /><em>the response.</em></h2><p class="lead">Technical depth across security operations, paired with the discipline to document, tune, and communicate.</p></div>
+        <div class="skill-grid">
+          <article class="skill-card"><div class="skill-icon shield">⌁</div><h3>Incident response</h3><p>Alert monitoring, triage, containment, response, escalation, and incident coordination across high-severity security events.</p></article>
+          <article class="skill-card"><div class="skill-icon radar">◉</div><h3>Threat hunting</h3><p>Active investigation to identify potential threats, attack vectors, indicators of compromise, and indicators of attack.</p></article>
+          <article class="skill-card"><div class="skill-icon cloud">☁</div><h3>Multi-cloud defense</h3><p>Investigation and mitigation of multi-cloud security threats, working with specialized teams to resolve complex alerts.</p></article>
+          <article class="skill-card"><div class="skill-icon tune">≋</div><h3>Detection engineering</h3><p>Detection-rule development, SIEM logic tuning, log-source assessment, and false-positive reduction.</p></article>
+          <article class="skill-card"><div class="skill-icon note">✦</div><h3>Operational clarity</h3><p>Playbooks, workflows, onboarding documentation, executive updates, technical writing, and stakeholder coordination.</p></article>
+          <article class="skill-card"><div class="skill-icon query">&lt;/&gt;</div><h3>Query languages</h3><p>Investigation and detection work informed by security query languages and EDR / SIEM analytics.</p></article>
+        </div>
+        <section class="toolbox"><p class="section-kicker">Tools and platforms</p><div class="toolbox-grid"><article><b>S</b><div><h3>Splunk</h3><p>Detection rules, SIEM analysis, threat hunting</p></div></article><article><b>MS</b><div><h3>Microsoft Sentinel</h3><p>Threat hunting and security investigation</p></div></article><article><b>CS</b><div><h3>CrowdStrike</h3><p>EDR analysis, community collaboration, Falcon learning</p></div></article><article><b>MI</b><div><h3>MISP</h3><p>Threat intelligence, IoC and IoA management</p></div></article><article><b>SN</b><div><h3>ServiceNow</h3><p>Ticketing, service management, and client workflows</p></div></article><article><b>VM</b><div><h3>FlareVM</h3><p>Home-lab security research environment</p></div></article><article><b>KL</b><div><h3>Kali Linux</h3><p>Home-lab security learning environment</p></div></article><article><b>LD</b><div><h3>LetsDefend</h3><p>Modules, labs, and SOC simulations</p></div></article></div></section>
+      </section>
+
+      <section class="page" id="credentials" aria-labelledby="credentials-title" hidden>
+        <div class="page-intro compact"><p class="eyebrow accent"><i></i> 04 / Credentials</p><h2 id="credentials-title">Verified learning,<br /><em>applied daily.</em></h2><p class="lead">Open any credential card to view its issuing-platform verification page.</p></div>
+        <div class="credential-section"><p class="section-kicker">Microsoft certifications</p><div class="credential-grid"><a class="credential-card microsoft" href="https://learn.microsoft.com/en-us/users/orolfius/credentials/54f1e4b3948d579c?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noreferrer"><span class="cert-mark">MS</span><div><p>Microsoft Certified</p><h3>SC-200</h3><span>Security Operations Analyst Associate</span></div><b>↗</b></a><a class="credential-card microsoft" href="https://learn.microsoft.com/en-us/users/orolfius/credentials/619236d0d882991?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noreferrer"><span class="cert-mark">MS</span><div><p>Microsoft Certified</p><h3>AZ-900</h3><span>Azure Fundamentals</span></div><b>↗</b></a><a class="credential-card microsoft" href="https://learn.microsoft.com/en-us/users/orolfius/credentials/4747b85786e772ee?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noreferrer"><span class="cert-mark">MS</span><div><p>Microsoft Certified</p><h3>SC-900</h3><span>Security, Compliance, and Identity Fundamentals</span></div><b>↗</b></a><a class="credential-card microsoft" href="https://learn.microsoft.com/en-us/users/orolfius/credentials/4b9d507ef08c2eef?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noreferrer"><span class="cert-mark">MS</span><div><p>Microsoft Certified</p><h3>AI-900</h3><span>Azure AI Fundamentals</span></div><b>↗</b></a></div></div>
+        <div class="credential-section"><p class="section-kicker">Professional credentials</p><div class="credential-grid"><a class="credential-card dark-cert" href="https://www.credly.com/badges/e5bf3334-036d-4d41-bea5-79ee5cc57ada/public_url" target="_blank" rel="noreferrer"><span class="cert-mark">THM</span><div><p>TryHackMe</p><h3>SAL1</h3><span>Security Analyst Level 1</span></div><b>↗</b></a><a class="credential-card dark-cert" href="https://www.credly.com/badges/1c7382a1-7e21-469f-8a35-01543debcdf3/linked_in_profile" target="_blank" rel="noreferrer"><span class="cert-mark">+</span><div><p>CompTIA</p><h3>Security+</h3><span>SY0-701</span></div><b>↗</b></a><a class="credential-card dark-cert" href="https://www.credly.com/badges/1ca0980d-3f38-490e-936a-50c599aa320f/public_url" target="_blank" rel="noreferrer"><span class="cert-mark">ISC²</span><div><p>ISC2</p><h3>CC</h3><span>Certified in Cybersecurity</span></div><b>↗</b></a></div></div>
+      </section>
+
+      <section class="page" id="learning" aria-labelledby="learning-title" hidden>
+        <div class="page-intro compact"><p class="eyebrow accent"><i></i> 05 / Continuous learning</p><h2 id="learning-title">Practice beyond<br /><em>the desk.</em></h2><p class="lead">A hands-on learning habit informed by formal training, lab work, community participation, and SOC simulation.</p></div>
+        <div class="learning-layout"><section><p class="section-kicker">Selected training</p><ol class="training-list"><li><span>01</span><div><h3>GuideM: Cyber Defense and Threat Hunting</h3><p>Practical security defense and proactive threat-hunting training.</p></div></li><li><span>02</span><div><h3>FOR508: Advanced Incident Response, Threat Hunting, and Digital Forensics</h3><p>Advanced incident response, hunting, and digital-forensics coursework.</p></div></li><li><span>03</span><div><h3>CrowdStrike University: Incident Responder</h3><p>Incident-response learning within the CrowdStrike ecosystem.</p></div></li><li><span>04</span><div><h3>CrowdStrike University: Threat Hunter</h3><p>Threat-hunting practice using CrowdStrike security concepts and workflows.</p></div></li><li><span>05</span><div><h3>CrowdStrike University: Falcon Fundamentals</h3><p>Foundational Falcon platform training.</p></div></li><li><span>06</span><div><h3>IBM: Security Analyst Fundamentals Specialization</h3><p>Security analyst fundamentals coursework.</p></div></li></ol></section><aside class="lab-card"><p class="section-kicker">Home security lab</p><h3>Make learning observable.</h3><p>I manage a home cybersecurity learning lab using FlareVM, Kali Linux, and Linux Mint. I continue learning through LetsDefend modules, labs, and SOC simulations, and collaborate with the CrowdStrike community on EDR and query language-related inquiries.</p><div class="lab-stack"><span>FlareVM</span><span>Kali Linux</span><span>Linux Mint</span><span>LetsDefend</span></div></aside></div>
+      </section>
+
+      <section class="page" id="education" aria-labelledby="education-title" hidden>
+        <div class="page-intro compact"><p class="eyebrow accent"><i></i> 06 / Education</p><h2 id="education-title">Built on systems<br /><em>and networks.</em></h2></div>
+        <div class="education-list"><article><p>2018 - 2022</p><div><span class="school-type">Tertiary</span><h3>Polytechnic University of the Philippines</h3><ul><li>Bachelor of Science in Computer Engineering</li><li>Specialization in Computer Network Engineering</li></ul></div></article><article><p>2013 - 2018</p><div><span class="school-type">Secondary</span><h3>Lourdes School of Mandaluyong</h3><ul><li>Senior High School - STEM Graduate</li><li>Junior High School - Technology and Livelihood Education: Electronics</li></ul></div></article></div>
+        <section class="contact-card"><p class="section-kicker">Contact</p><h3>Let's improve the signal.</h3><div><a href="mailto:orolfojohnvincent@gmail.com">orolfojohnvincent@gmail.com <span>↗</span></a><a href="https://www.linkedin.com/in/orolfius" target="_blank" rel="noreferrer">linkedin.com/in/orolfius <span>↗</span></a><a href="tel:+639565292207">(+63) 956 529 2207</a></div></section>
       </section>
     </main>
-    <footer><span>© 2026 Vincent Orolfo</span><span>Built for a safer digital world.</span></footer>
+    <script src="app.js"></script>
   </body>
 </html>
